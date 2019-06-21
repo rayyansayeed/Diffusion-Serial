@@ -1,0 +1,11 @@
+default: DiffusionSourcesSinks
+
+DiffusionSourcesSinks.o: DiffusionSourcesSinks.c $(HEADERS)
+	gcc -c DiffusionSourcesSinks.c -o DiffusionSourcesSinks.o -lm
+
+DiffusionSourcesSinks: DiffusionSourcesSinks.o
+	gcc DiffusionSourcesSinks.o -o DiffusionSourcesSinks -lm
+
+clean:
+	-rm -f DiffusionSourcesSinks.o
+	-rm -f DiffusionSourcesSinks
